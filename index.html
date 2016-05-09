@@ -4,23 +4,31 @@
     <meta charset="utf-8">
     <title>Lance's Hangman</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
   </head>
 <body>
-  <header>
-    <div>
+  <div class ="row col-md-12" id = "jumbotron">
       <h1>Pirate's Hang</h1>
-    </div>
-  </header>
-  <section>
-    <div id = "instructions">
+  </div>
+  <div class = "row">
+    <div class = "col-md-8" id = "instructions">
       <p>Press any key to begin</p>
       <p>You only have a certain number of guesses so choose wisely</p>
       <p>Guess the word right, and you may just find some treasure!</p>
       </div>
-    <div id = "console">
+    <div class = "col-md-4" id = "console">
+      <div id = "word" class='spaces' style="font-size:28px; letter-spacing: 10px; ">
 
+      </div>
+      <div id = "guess">
+
+      </div>
+      <div id = "used">
+
+      </div>
     </div>
   </section>
 <script src="assets/javascript/game.js"></script>
