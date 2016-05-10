@@ -36,50 +36,6 @@ body {
   margin-top: 30px;
 }
 
-
-
-/*
-header {
-  height: 300px;
-  width: 70%;
-  margin: 0 auto;
-  background-image: url('../images/pirateShip.jpg');
-  background-size: cover;
-  text-align: center;
-  padding-top: 125px;
-}
-
-h1 {
-  font-size: 60px;
-}
-
-section {
-  height: 365px;
-  width: 70%;
-  margin: 0 auto;
-  border: 5px solid #FF0009;
-  padding: 30px auto;
-
-}
-
-#instructions {
-  padding: 30px auto;
-  width: 40%;
-  display: inline-block;
-  border: 5px blue solid;
-}
-
-#console {
-  height: 100%
-  width: 60%
-  padding: 30px auto;
-  border: 5px solid yellow;
-  display: inline-block;
-
-}
-
-*/
-
 .spaces {
   display: inline-block;
 }
