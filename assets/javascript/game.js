@@ -58,6 +58,19 @@ function updateSpaces() {
   }
 }
 
+//function resets the game when the user loses or wins
+function resetGame() {
+  hang.pickWord();
+  randomIndex = hang.pickWord();
+  randomWord = hang.words[randomIndex];
+  toWin= 0;
+  hang.wrong = [];
+  hang.printWrong();
+  guesses = randomWord.length*2;
+  guessLeft = "<p>You have "+guesses+" guesses left</p>";
+  document.querySelector("#guess").innerHTML = guessLeft;
+  createSpaces();
+}
 
 //calls the createSpaces function to create underscores equal to the length of the word to be guessed.
 createSpaces();
@@ -91,20 +104,15 @@ document.onkeyup = function(event) {
       //if the user runs out of guesses alert them they've lost
       if( guesses === 0) {
         alert("Your pirate has been hung.");
-        hang.pickWord();
-        createSpaces();
-        console.log(randomWord);
-        guesses= randomWord.length*2;
+        resetGame();
       }
 
       //if the user guesses the word then add 1 to wins and reset the game
       if( toWin === randomWord.length) {
-        toWin= 0;
         hang.wins++;
         hang.writeWins();
-        hang.pickWord();
-        createSpaces();
-        alert("You saved your pirate from the hangman, and you found some treasure while you were at it!");
+        alert("You guessed '"+randomWord+"' correctly. You saved your pirate from the hangman, and you found some treasure while you were at it!");
+        resetGame();
       }
 };
 console.log(randomWord);
